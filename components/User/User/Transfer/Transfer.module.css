@@ -1,0 +1,168 @@
+/* TRANSFER BOX */
+.transfer_box {
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(50px); /* Initial state for animation */
+    animation: fadeIn 0.8s ease-in-out forwards; /* Smooth animation on load */
+}
+
+/* LEFT SIDE */
+.transfer_box_left {
+    background: linear-gradient(135deg, #4E1D94, #372066);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.transfer_box_left:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.transfer_box_left h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.transfer_box_left_box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.transfer_box_left_box p {
+    padding: 1.5rem;
+    border-radius: 4px;
+    background-color: #2B0C65;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transfer_box_left_box p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.transfer_box_left_box span {
+    display: block;
+    margin-top: 2rem;
+    background: linear-gradient(135deg, #4E1D94, #372066);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.funToken_img {
+    border-radius: 50%;
+}
+
+/* RIGHT SIDE */
+.transfer_box_right {
+    background: linear-gradient(135deg, #4E1D94, #372066);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.transfer_box_right:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.transfer_box_right h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.transfer_box_right input {
+    width: 100%;
+    background-color: #2B0C65;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.transfer_box_right input::placeholder {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.transfer_box_right input:focus {
+    box-shadow: 0 0 8px rgba(78, 29, 148, 0.8);
+}
+
+.transfer_box_right_btn {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.transfer_box_right_btn button {
+    background-color: #2B0C65;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.transfer_box_right_btn button:hover {
+    background-color: #4E1D94;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .transfer_box {
+        grid-template-columns: 1fr;
+    }
+
+    .transfer_box_left_box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .transfer_box_right_btn button {
+        padding: 1rem 2rem;
+    }
+}
